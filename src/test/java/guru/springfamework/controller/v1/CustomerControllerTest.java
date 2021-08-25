@@ -17,6 +17,7 @@ import java.util.Arrays;
 import static guru.springfamework.controller.v1.AbstractControllerTest.asJsonString;
 import static org.hamcrest.Matchers.*;
 import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.Mockito.verify;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -149,6 +150,13 @@ public class CustomerControllerTest {
 
     }
 
+    @Test
+    public void testDeleteCustomer() throws Exception {
+        mockMvc.perform(delete("/api/v1/customers/1")
+        .contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk());
+
+        verify(customerService).deleteCustomerById(anyLong());
+    }
 
 
 
