@@ -1,14 +1,9 @@
 package guru.springfamework.service;
 
-import guru.springfamework.api.v1.mapper.CategoryMapper;
 import guru.springfamework.api.v1.mapper.CustomerMapper;
-import guru.springfamework.api.v1.model.CategoryDTO;
 import guru.springfamework.api.v1.model.CustomerDTO;
-import guru.springfamework.domain.Category;
 import guru.springfamework.domain.Customer;
-import guru.springfamework.repositories.CategoryRepository;
 import guru.springfamework.repositories.CustomerRepository;
-import org.hibernate.mapping.Any;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -19,7 +14,6 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 
