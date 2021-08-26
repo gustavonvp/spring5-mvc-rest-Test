@@ -54,7 +54,7 @@ public class CustomerServiceImpl implements CustomerService {
 
         CustomerDTO returnDto = customerMapper.customerToCustomerDTO(savedCustomer);
 
-        returnDto.setCustomerUrl(getCustomerUrl(customer.getId()));
+        returnDto.setCustomerUrl(getCustomerUrl(savedCustomer.getId()));
 
         return returnDto;
     }
@@ -84,7 +84,7 @@ public class CustomerServiceImpl implements CustomerService {
             returnDTO.setCustomerUrl(getCustomerUrl(customer.getId()));
 
             return returnDTO;
-        }).orElseThrow(RuntimeException::new); //todo implement better exception handling
+        }).orElseThrow(ResourceNotFoundException::new); //todo implement better exception handling
 
     }
 
