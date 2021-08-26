@@ -2,6 +2,7 @@ package guru.springfamework.controller.v1;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import guru.springfamework.api.v1.model.CustomerDTO;
+import guru.springfamework.api.v1.model.VendorDTO;
 
 public class AbstractControllerTest {
 
@@ -13,4 +14,14 @@ public class AbstractControllerTest {
             throw new RuntimeException(e);
         }
     }
+
+    public static String asJsonString(VendorDTO vendorDTO) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            return objectMapper.writeValueAsString(vendorDTO);
+        } catch(Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
