@@ -38,6 +38,7 @@ public class Bootstrap implements CommandLineRunner {
         vendor2.setName("Vendor 2");
         vendorRepository.save(vendor2);
 
+        System.out.println("Vendors Loaded = " + vendorRepository.count());
     }
 
     private void loadCategories() {
