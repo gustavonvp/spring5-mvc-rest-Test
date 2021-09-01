@@ -18,6 +18,7 @@ import java.util.Arrays;
 
 import static guru.springfamework.controller.v1.AbstractControllerTest.asJsonString;
 import static org.hamcrest.Matchers.*;
+import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.verify;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -56,7 +57,7 @@ public class CustomerControllerTest {
         customer2.setLastname("Axe");
         customer2.setCustomerUrl(CustomerController.BASE_URL + "/2");
 
-        when(customerService.getAllCustomers()).thenReturn(Arrays.asList(customer1, customer2));
+        when(customerService.getAllCustomers()).thenReturn(anyList());
 
         mockMvc.perform(get(CustomerController.BASE_URL )
                 .accept(MediaType.APPLICATION_JSON)
