@@ -1,9 +1,10 @@
 package guru.springfamework.controller.v1;
 
-import guru.springfamework.api.v1.model.CustomerDTO;
-import guru.springfamework.controller.ResponseEntityExceptionHandler;
-import guru.springfamework.service.CustomerService;
-import guru.springfamework.service.ResourceNotFoundException;
+import guru.springframework.model.CustomerDTO;
+import guru.springframework.controller.ResponseEntityExceptionHandler;
+import guru.springframework.controller.v1.CustomerController;
+import guru.springframework.service.CustomerService;
+import guru.springframework.service.ResourceNotFoundException;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentMatchers;
@@ -13,8 +14,6 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-
-import java.util.Arrays;
 
 import static guru.springfamework.controller.v1.AbstractControllerTest.asJsonString;
 import static org.hamcrest.Matchers.*;
@@ -74,7 +73,7 @@ public class CustomerControllerTest {
         customer1.setLastname("Weston");
         customer1.setCustomerUrl(CustomerController.BASE_URL + "/1");
 
-        when(customerService.getCustomerById(1L)).thenReturn((customer1));
+        when(customerService.getCustomerById(1L)).thenReturn(customer1);
 
         //when
         mockMvc.perform(get(CustomerController.BASE_URL + "/1")

@@ -1,12 +1,14 @@
 package guru.springfamework.service;
 
-import guru.springfamework.api.v1.mapper.CustomerMapper;
-import guru.springfamework.api.v1.model.CustomerDTO;
-import guru.springfamework.bootstrap.Bootstrap;
-import guru.springfamework.domain.Customer;
-import guru.springfamework.repositories.CategoryRepository;
-import guru.springfamework.repositories.CustomerRepository;
-import guru.springfamework.repositories.VendorRepository;
+import guru.springframework.api.v1.mapper.CustomerMapper;
+import guru.springframework.model.CustomerDTO;
+import guru.springframework.bootstrap.Bootstrap;
+import guru.springframework.domain.Customer;
+import guru.springframework.repositories.CategoryRepository;
+import guru.springframework.repositories.CustomerRepository;
+import guru.springframework.repositories.VendorRepository;
+import guru.springframework.service.CustomerService;
+import guru.springframework.service.CustomerServiceImpl;
 import org.hamcrest.CoreMatchers;
 import org.junit.Before;
 import org.junit.Test;

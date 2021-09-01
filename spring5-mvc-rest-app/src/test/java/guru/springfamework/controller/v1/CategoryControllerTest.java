@@ -1,9 +1,10 @@
 package guru.springfamework.controller.v1;
 
-import guru.springfamework.api.v1.model.CategoryDTO;
-import guru.springfamework.controller.ResponseEntityExceptionHandler;
-import guru.springfamework.service.CategoryService;
-import guru.springfamework.service.ResourceNotFoundException;
+import guru.springframework.api.v1.model.CategoryDTO;
+import guru.springframework.controller.ResponseEntityExceptionHandler;
+import guru.springframework.controller.v1.CategoryController;
+import guru.springframework.service.CategoryService;
+import guru.springframework.service.ResourceNotFoundException;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;

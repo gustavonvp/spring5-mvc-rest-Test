@@ -1,7 +1,8 @@
 package guru.springfamework.api.v1.mapper;
 
-import guru.springfamework.api.v1.model.CustomerDTO;
-import guru.springfamework.domain.Customer;
+import guru.springframework.api.v1.mapper.CustomerMapper;
+import guru.springframework.model.CustomerDTO;
+import guru.springframework.domain.Customer;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

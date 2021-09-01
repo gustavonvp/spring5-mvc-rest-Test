@@ -1,8 +1,8 @@
 package guru.springfamework.controller.v1;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import guru.springfamework.api.v1.model.CustomerDTO;
-import guru.springfamework.api.v1.model.VendorDTO;
+import guru.springframework.model.CustomerDTO;
+import guru.springframework.api.v1.model.VendorDTO;
 
 public class AbstractControllerTest {
 

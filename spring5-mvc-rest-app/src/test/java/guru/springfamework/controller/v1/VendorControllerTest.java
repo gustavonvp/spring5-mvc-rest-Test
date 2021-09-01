@@ -1,8 +1,9 @@
 package guru.springfamework.controller.v1;
 
-import guru.springfamework.api.v1.model.VendorDTO;
-import guru.springfamework.api.v1.model.VendorListDTO;
-import guru.springfamework.service.VendorService;
+import guru.springframework.api.v1.model.VendorDTO;
+import guru.springframework.api.v1.model.VendorListDTO;
+import guru.springframework.controller.v1.VendorController;
+import guru.springframework.service.VendorService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
